@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Şeftali Studio - Anasayfa</title>
     <style>
+        /* Menü Ayarları */
         nav { 
             background-color: #333; 
             padding: 15px; 
@@ -26,6 +27,7 @@
             padding-top: 60px;
         }
         
+        /* Bölüm Tasarımları */
         .section { 
             min-height: 100vh; 
             display: flex; 
@@ -42,6 +44,7 @@
         h1 { color: #ff7f50; font-size: 3.5em; margin: 10px 0; }
         .slogan { font-style: italic; color: #555; font-size: 1.5em; margin-bottom: 30px; }
 
+        /* Ramazan Kartı */
         .ramazan-container {
             display: flex;
             flex-direction: row;
@@ -122,6 +125,27 @@
             </div>
         </div>
     </div>
+
+    <div style="margin-top: 50px; padding: 40px; opacity: 0.4;">
+        <span onclick="adminPaneli()" style="cursor: pointer; font-size: 0.8em; color: #888; border-bottom: 1px dashed #888; font-family: monospace;">
+            🔒 Studio Management System v2.6
+        </span>
+    </div>
+
+    <script>
+    function adminPaneli() {
+        var user = prompt("Kullanıcı Adı:");
+        var pass = prompt("Erişim Şifresi:");
+        
+        // Kullanıcı adı: Patates_14 | Şifre: seftali2026
+        if (user === "Patates_14" && pass === "seftali2026") {
+            alert("Erişim Onaylandı. Hoş geldin Patates_14!");
+            window.location.href = "admin.html";
+        } else {
+            alert("Erişim Reddedildi: Yetkisiz Kullanıcı!");
+        }
+    }
+    </script>
 
 </body>
 </html>
