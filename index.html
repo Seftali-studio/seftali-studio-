@@ -73,7 +73,7 @@
             margin-top: 15px;
         }
 
-        /* Yeni Siyah Footer Tasarımı */
+        /* Siyah Footer Tasarımı */
         footer { 
             background-color: #1a1a1a; 
             color: #ccc; 
@@ -160,8 +160,6 @@
            🔵 Facebook Hesabımız
         </a>
 
-        <p style="font-size: 0.8em; opacity: 0.5; margin-top: 30px;">2026 - Şeftali Studio</p>
-        
         <div class="admin-link" onclick="adminPaneli()">
             [ SYSTEM ACCESS V2.6 ]
         </div>
@@ -172,12 +170,11 @@
         var user = prompt("Kullanıcı Adı:");
         var pass = prompt("Erişim Şifresi:");
         
-        // Kullanıcı: Patates_14 | Şifre: seftali2026
         if (user === "Patates_14" && pass === "seftali2026") {
             alert("Erişim Onaylandı. Hoş geldin Patates_14!");
             window.location.href = "admin.html";
         } else {
-            alert("Erişim Reddedildi: Yetkisiz Kullanıcı!");
+            alert("Erişim Reddedildi!");
         }
     }
     </script>
