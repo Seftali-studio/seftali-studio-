@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Şeftali Studio - Anasayfa</title>
     <style>
-        /* Menü Çubuğunu Sabitle ve Şıklaştır */
+        /* Menü Ayarları */
         nav { 
             background-color: #333; 
             padding: 15px; 
@@ -24,10 +24,9 @@
             text-align: center; 
             background-color: #fff5f0; 
             scroll-behavior: smooth; 
-            padding-top: 60px; /* Menünün altında kalmaması için */
+            padding-top: 60px;
         }
         
-        /* Bölüm Ayarları */
         .section { 
             min-height: 100vh; 
             display: flex; 
@@ -44,7 +43,7 @@
         h1 { color: #ff7f50; font-size: 3.5em; margin: 10px 0; }
         .slogan { font-style: italic; color: #555; font-size: 1.5em; margin-bottom: 30px; }
 
-        /* Ramazan Etkinliği Kartı */
+        /* Ramazan Kartı */
         .ramazan-container {
             display: flex;
             flex-direction: row;
@@ -74,9 +73,8 @@
             margin-top: 15px;
         }
 
-        /* Alt Bilgiler */
         .info-cards { display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap; }
-        .info-card { background: white; padding: 20px; border-radius: 20px; width: 280px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .info-card { background: white; padding: 20px; border-radius: 20px; width: 280px; }
 
         @keyframes bounce {
             0%, 100% {transform: translateY(0);}
@@ -96,7 +94,7 @@
         <img src="logo.png" alt="Seftali Studio Logo" class="logo">
         <h1>Şeftali Studio</h1>
         <p class="slogan">"Basitlikten Doğan Eğlence."</p>
-        <div style="color: #ff7f50; font-weight: bold; animation: bounce 2s infinite; cursor: default;">
+        <div style="color: #ff7f50; font-weight: bold; animation: bounce 2s infinite;">
             Etkinlikler İçin Aşağı Kaydır ↓
         </div>
     </div>
@@ -120,10 +118,6 @@
         </div>
 
         <div class="info-cards">
-            <div class="info-card">
-                <h3 style="color: #333;">Scratch Game Jam</h3>
-                <p style="color: #666;">Topluluk olarak düzenlediğimiz hızlı oyun yapma yarışmaları.</p>
-            </div>
             <div class="info-card">
                 <h3 style="color: #333;">Gelecek Planlar</h3>
                 <p style="color: #666;">Şeftali Studio olarak 2026'da yepyeni oyunlar yayınlayacağız.</p>
