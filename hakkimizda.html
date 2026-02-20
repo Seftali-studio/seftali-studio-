@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Hakkımızda - Şeftali Studio</title>
     <style>
-        /* Menü Tasarımı (Anasayfa ile Aynı) */
+        /* Menü Tasarımı */
         nav { 
             background-color: #333; 
             padding: 15px; 
@@ -27,7 +27,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 50px auto;
             background: white;
             padding: 40px;
@@ -35,27 +35,37 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
-        h1 { color: #ff7f50; font-size: 2.5em; }
-        p { color: #555; line-height: 1.8; font-size: 1.1em; }
+        h1 { color: #ff7f50; font-size: 2.8em; margin-bottom: 20px; }
+        
+        .ana-yazi {
+            font-size: 1.3em;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
 
         .vizyon-kartlari {
             display: flex;
-            justify-content: space-around;
-            margin-top: 30px;
+            justify-content: center;
+            gap: 20px;
             flex-wrap: wrap;
+            margin-top: 30px;
         }
 
         .kart {
             background: #fff5f0;
-            padding: 20px;
+            padding: 25px;
             border-radius: 20px;
-            width: 200px;
-            margin: 10px;
+            width: 250px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+            transition: 0.3s;
         }
+        .kart:hover { transform: translateY(-5px); }
+        .kart h3 { color: #d35400; margin-top: 0; }
+        .kart p { color: #666; font-size: 1em; line-height: 1.4; }
 
-        .kart h3 { color: #d35400; margin-bottom: 10px; }
-
-        /* Footer Tasarımı (Anasayfa ile Birebir Aynı) */
+        /* Footer Tasarımı */
         footer { 
             background-color: #1a1a1a; 
             color: #ccc; 
@@ -83,29 +93,28 @@
     </nav>
 
     <div class="container">
-        <h1>Biz Kimiz? 🍑</h1>
-        <p>
-            Şeftali Studio, oyun dünyasında sadeliği ve eğlenceyi ön planda tutan bir topluluk projesidir. 
-            Amacımız, karmaşık mekaniklerden uzak, herkesin keyif alabileceği ve 
-            basitlikten ilham alan dijital deneyimler üretmektir.
+        <h1>Hakkımızda 🍑</h1>
+        
+        <p class="ana-yazi">
+            Şeftali Studio, Scratch projelerinden ilham alarak doğan, eğlenceyi ve topluluk ruhunu bir araya getiren bağımsız bir stüdyodur. Bizim için en önemli şey, projelerimizde samimiyeti ve basitliği koruyarak herkese ulaşabilmektir.
         </p>
         
         <div class="vizyon-kartlari">
             <div class="kart">
-                <h3>Eğlence</h3>
-                <p>Her yaştan oyuncu için saf eğlence odaklı projeler.</p>
+                <h3>Oyunlarımız</h3>
+                <p>Kendi dünyamızdan renkli ve eğlenceli hikayeleri Scratch projelerimizle sizlere sunuyoruz.</p>
             </div>
             <div class="kart">
-                <h3>Topluluk</h3>
-                <p>Fikirlerin paylaşıldığı samimi bir stüdyo ortamı.</p>
+                <h3>Topluluğumuz</h3>
+                <p>Şeftali Studio sadece bir isim değil, destekçilerimizle büyüyen kocaman bir topluluktur.</p>
             </div>
             <div class="kart">
-                <h3>Yaratıcılık</h3>
-                <p>Basit araçlarla büyük dünyalar inşa etmek.</p>
+                <h3>Hedefimiz</h3>
+                <p>"Basitlikten Doğan Eğlence" mottosuyla, daha fazla kişiye ulaşıp yüzlerde bir gülümseme bırakmak.</p>
             </div>
         </div>
 
-        <p style="margin-top: 30px; font-weight: bold; color: #ff7f50;">
+        <p style="margin-top: 40px; font-size: 1.5em; font-weight: bold; color: #ff7f50; font-style: italic;">
             "Basitlikten Doğan Eğlence."
         </p>
     </div>
