@@ -4,41 +4,74 @@
     <meta charset="UTF-8">
     <title>Hakkımızda - Şeftali Studio</title>
     <style>
-        /* Menü Tasarımı */
-        nav {
-            background-color: #333;
-            padding: 15px;
-            text-align: center;
+        /* Menü Tasarımı (Anasayfa ile Aynı) */
+        nav { 
+            background-color: #333; 
+            padding: 15px; 
+            text-align: center; 
+            position: fixed; 
+            top: 0; 
+            left: 0;
+            width: 100%; 
+            z-index: 1000; 
         }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #ff7f50;
-        }
+        nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; font-family: sans-serif; }
+        nav a:hover { color: #ff7f50; }
         
-        /* Sayfa İçeriği */
         body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            font-family: sans-serif; 
             margin: 0; 
             text-align: center; 
             background-color: #fff5f0; 
-            color: #333;
+            padding-top: 80px;
         }
+
         .container {
             max-width: 800px;
             margin: 50px auto;
-            padding: 30px;
-            background-color: white;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
+
         h1 { color: #ff7f50; font-size: 2.5em; }
-        p { line-height: 1.8; font-size: 1.2em; margin-bottom: 20px; }
-        .highlight { font-weight: bold; color: #ff7f50; }
+        p { color: #555; line-height: 1.8; font-size: 1.1em; }
+
+        .vizyon-kartlari {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .kart {
+            background: #fff5f0;
+            padding: 20px;
+            border-radius: 20px;
+            width: 200px;
+            margin: 10px;
+        }
+
+        .kart h3 { color: #d35400; margin-bottom: 10px; }
+
+        /* Footer Tasarımı (Anasayfa ile Birebir Aynı) */
+        footer { 
+            background-color: #1a1a1a; 
+            color: #ccc; 
+            padding: 60px 20px; 
+            margin-top: 50px; 
+        }
+        
+        .fb-button { 
+            display: inline-block; background-color: white; color: #4267B2; 
+            padding: 10px 25px; border-radius: 12px; text-decoration: none; 
+            font-weight: bold; margin: 15px 0; transition: 0.3s; 
+        }
+        .fb-button:hover { background-color: #f0f0f0; transform: scale(1.05); }
+        
+        .admin-link { margin-top: 35px; cursor: pointer; font-family: monospace; font-size: 0.8em; opacity: 0.4; color: #888; }
+        .admin-link:hover { opacity: 1; color: #ff7f50; }
     </style>
 </head>
 <body>
@@ -46,25 +79,62 @@
     <nav>
         <a href="index.html">Anasayfa</a>
         <a href="hakkimizda.html">Hakkımızda</a>
-        <a href="#">İletişim</a>
+        <a href="https://scratch.mit.edu/users/Seftali_studio/projects/" target="_blank">Oyunlarımız</a>
     </nav>
 
     <div class="container">
-        <h1>🍑 Hakkımızda</h1>
-        
+        <h1>Biz Kimiz? 🍑</h1>
         <p>
-            <span class="highlight">Şeftali Studio</span>, 1 Ekim 2020 tarihinde kurulmuştur bir topluluktur. 
-            2022'den beri oyun yayınlamaktadır.
+            Şeftali Studio, oyun dünyasında sadeliği ve eğlenceyi ön planda tutan bir topluluk projesidir. 
+            Amacımız, karmaşık mekaniklerden uzak, herkesin keyif alabileceği ve 
+            basitlikten ilham alan dijital deneyimler üretmektir.
         </p>
         
-        <p>
-            Basit ve eğlenceli oyunlar yaparız, <span class="highlight">karmaşık oyun yapmayız.</span>
-        </p>
-        
-        <p>
-            En çok <span class="highlight">Scratch</span> oyun motorunda oyun yaparız.
+        <div class="vizyon-kartlari">
+            <div class="kart">
+                <h3>Eğlence</h3>
+                <p>Her yaştan oyuncu için saf eğlence odaklı projeler.</p>
+            </div>
+            <div class="kart">
+                <h3>Topluluk</h3>
+                <p>Fikirlerin paylaşıldığı samimi bir stüdyo ortamı.</p>
+            </div>
+            <div class="kart">
+                <h3>Yaratıcılık</h3>
+                <p>Basit araçlarla büyük dünyalar inşa etmek.</p>
+            </div>
+        </div>
+
+        <p style="margin-top: 30px; font-weight: bold; color: #ff7f50;">
+            "Basitlikten Doğan Eğlence."
         </p>
     </div>
+
+    <footer>
+        <p style="margin-bottom: 5px; font-weight: bold; color: #fff; font-size: 1.5em;">Şeftali Studio Topluluğu</p>
+        <p style="font-size: 1.1em; color: #ff7f50; margin-bottom: 20px; font-style: italic;">"Basitlikten Doğan Eğlence."</p>
+        
+        <a href="https://www.facebook.com/Seftalistudio" target="_blank" class="fb-button">
+           🔵 Facebook Hesabımız
+        </a>
+
+        <div class="admin-link" onclick="adminPaneli()">
+            [ SYSTEM ACCESS V2.6 ]
+        </div>
+    </footer>
+
+    <script>
+    function adminPaneli() {
+        var user = prompt("Kullanıcı Adı:");
+        var pass = prompt("Erişim Şifresi:");
+        if (user === "Patates_14" && pass === "seftali2026") {
+            alert("Erişim Onaylandı. Hoş geldin Patates_14!");
+            window.location.href = "admin.html";
+        } else {
+            alert("Erişim Reddedildi!");
+        }
+    }
+    </script>
 
 </body>
 </html>
