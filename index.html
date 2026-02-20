@@ -43,7 +43,7 @@
         h1 { color: #ff7f50; font-size: 3.5em; margin: 10px 0; }
         .slogan { font-style: italic; color: #555; font-size: 1.5em; margin-bottom: 30px; }
 
-        /* DUYURU PENCERESİ (MODAL) STİLLERİ */
+        /* DUYURU PENCERESİ (MODAL) */
         .modal {
             display: flex; 
             position: fixed;
@@ -150,7 +150,7 @@
     <nav>
         <a href="index.html">Anasayfa</a>
         <a href="hakkimizda.html">Hakkımızda</a>
-        <a href="#">Yakında</a>
+        <a href="https://scratch.mit.edu/users/Seftali_studio/projects/" target="_blank">Oyunlarımız</a>
     </nav>
 
     <div class="section hero">
@@ -186,12 +186,10 @@
     </footer>
 
     <script>
-    // Popup Kapatma Fonksiyonu
     function kapatDuyuru() {
         document.getElementById("duyuruModal").style.display = "none";
     }
 
-    // Yönetici Girişi
     function adminPaneli() {
         var user = prompt("Kullanıcı Adı:");
         var pass = prompt("Erişim Şifresi:");
