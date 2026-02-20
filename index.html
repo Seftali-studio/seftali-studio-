@@ -4,95 +4,27 @@
     <meta charset="UTF-8">
     <title>Şeftali Studio - Anasayfa</title>
     <style>
-        nav { 
-            background-color: #333; 
-            padding: 15px; 
-            text-align: center; 
-            position: fixed; 
-            top: 0; 
-            left: 0;
-            width: 100%; 
-            z-index: 1000; 
-        }
+        nav { background-color: #333; padding: 15px; text-align: center; position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; }
         nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; font-family: sans-serif; }
         nav a:hover { color: #ff7f50; }
-        
-        body { 
-            font-family: sans-serif; 
-            margin: 0; 
-            text-align: center; 
-            background-color: #fff5f0; 
-            scroll-behavior: smooth; 
-            padding-top: 60px;
-        }
-        
-        .section { 
-            min-height: 100vh; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
-            padding: 40px 20px;
-        }
-
+        body { font-family: sans-serif; margin: 0; text-align: center; background-color: #fff5f0; scroll-behavior: smooth; padding-top: 60px; }
+        .section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px 20px; }
         .hero { background-color: white; }
         .etkinlikler { background-color: #ffe0d0; }
-
         .logo { width: 280px; height: auto; border-radius: 15px; margin-bottom: 20px; }
         h1 { color: #ff7f50; font-size: 3.5em; margin: 10px 0; }
         .slogan { font-style: italic; color: #555; font-size: 1.5em; margin-bottom: 30px; }
-
-        .ramazan-container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            background: white;
-            padding: 30px;
-            border-radius: 30px;
-            max-width: 950px;
-            margin: 30px auto;
-            align-items: center;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            text-align: left;
-        }
+        .ramazan-container { display: flex; flex-direction: row; flex-wrap: wrap; background: white; padding: 30px; border-radius: 30px; max-width: 950px; margin: 30px auto; align-items: center; box-shadow: 0 15px 35px rgba(0,0,0,0.1); text-align: left; }
         .ramazan-img { flex: 1; min-width: 300px; }
         .ramazan-img img { width: 100%; border-radius: 20px; }
         .ramazan-text { flex: 1; min-width: 300px; padding: 25px; }
-
-        .btn {
-            background-color: #ff7f50;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 12px;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 1.1em;
-            margin-top: 15px;
-        }
-
-        .info-cards { display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap; }
-        .info-card { background: white; padding: 20px; border-radius: 20px; width: 280px; }
-
-        /* Alt Kısım (Footer) ve Gizli Giriş Stili */
-        footer {
-            background-color: #333;
-            color: #888;
-            padding: 40px 20px;
-            margin-top: 50px;
-        }
-        .admin-link {
-            cursor: pointer;
-            font-family: monospace;
-            font-size: 0.9em;
-            transition: 0.3s;
-        }
-        .admin-link:hover { color: #ff7f50; }
-
-        @keyframes bounce {
-            0%, 100% {transform: translateY(0);}
-            50% {transform: translateY(-10px);}
-        }
+        .btn { background-color: #ff7f50; color: white; border: none; padding: 12px 25px; border-radius: 12px; font-weight: bold; cursor: pointer; font-size: 1.1em; margin-top: 15px; }
+        
+        /* Footer Tasarımı */
+        footer { background-color: #222; color: #ccc; padding: 50px 20px; margin-top: 50px; }
+        .admin-link:hover { color: #ff7f50; opacity: 1 !important; }
+        
+        @keyframes bounce { 0%, 100% {transform: translateY(0);} 50% {transform: translateY(-10px);} }
     </style>
 </head>
 <body>
@@ -107,40 +39,30 @@
         <img src="logo.png" alt="Seftali Studio Logo" class="logo">
         <h1>Şeftali Studio</h1>
         <p class="slogan">"Basitlikten Doğan Eğlence."</p>
-        <div style="color: #ff7f50; font-weight: bold; animation: bounce 2s infinite;">
-            Etkinlikler İçin Aşağı Kaydır ↓
-        </div>
+        <div style="color: #ff7f50; font-weight: bold; animation: bounce 2s infinite;">Etkinlikler İçin Aşağı Kaydır ↓</div>
     </div>
 
     <div class="section etkinlikler">
         <h2 style="font-size: 2.8em; color: #d35400;">🗓️ Etkinliklerimiz</h2>
-        <h3 style="color: #ff7f50; font-size: 1.8em; margin-bottom: 10px;">🔥 Devam Eden Etkinlikler</h3>
-
         <div class="ramazan-container">
-            <div class="ramazan-img">
-                <img src="ramazan.png" alt="Çiftlik Ramazan">
-            </div>
+            <div class="ramazan-img"><img src="ramazan.png" alt="Çiftlik Ramazan"></div>
             <div class="ramazan-text">
                 <h2 style="color: #ff7f50; margin-top: 0;">Çiftlik Oyunu Ramazan Etkinliği</h2>
-                <p style="color: #444; line-height: 1.6; font-size: 1.1em;">
-                    Şeftali Çiftliği'nde davullar çalıyor! 🥁 <br><br>
-                    Tavuğumuz ve ineğimizle hazırladığımız bu özel projede Ramazan neşesini keşfedin.
-                </p>
+                <p style="color: #444; line-height: 1.6;">Şeftali Çiftliği'nde davullar çalıyor! 🥁 <br> Ramazan neşesini keşfedin.</p>
                 <button class="btn">Yakında Yayında!</button>
-            </div>
-        </div>
-
-        <div class="info-cards">
-            <div class="info-card">
-                <h3 style="color: #333;">Gelecek Planlar</h3>
-                <p style="color: #666;">Şeftali Studio olarak 2026'da yepyeni oyunlar yayınlayacağız.</p>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>© 2026 Şeftali Studio - Tüm Hakları Saklıdır.</p>
-        <div class="admin-link" onclick="adminPaneli()">
+        <p style="margin-bottom: 10px; font-weight: bold; color: #fff; font-size: 1.3em;">Şeftali Studio Topluluğu</p>
+        <div style="margin-bottom: 20px;">
+            <a href="https://www.facebook.com/Seftalistudio" target="_blank" style="color: #4267B2; text-decoration: none; font-size: 1.1em; font-weight: bold; background: white; padding: 8px 15px; border-radius: 10px;">
+                f Facebook Hesabımız
+            </a>
+        </div>
+        <p style="font-size: 0.9em; opacity: 0.6;">2026 - Scratch ile Sevgiyle Geliştirildi.</p>
+        <div class="admin-link" onclick="adminPaneli()" style="margin-top: 30px; cursor: pointer; font-family: monospace; font-size: 0.8em; opacity: 0.4;">
             [ SYSTEM ACCESS V2.6 ]
         </div>
     </footer>
@@ -149,15 +71,13 @@
     function adminPaneli() {
         var user = prompt("Kullanıcı Adı:");
         var pass = prompt("Erişim Şifresi:");
-        
         if (user === "Patates_14" && pass === "seftali2026") {
             alert("Erişim Onaylandı. Hoş geldin Patates_14!");
             window.location.href = "admin.html";
         } else {
-            alert("Erişim Reddedildi: Yetkisiz Kullanıcı!");
+            alert("Erişim Reddedildi!");
         }
     }
     </script>
-
 </body>
 </html>
