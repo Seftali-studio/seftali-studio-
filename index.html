@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Şeftali Studio - Anasayfa</title>
     <style>
-        /* Menü Ayarları */
         nav { 
             background-color: #333; 
             padding: 15px; 
@@ -27,7 +26,6 @@
             padding-top: 60px;
         }
         
-        /* Bölüm Tasarımları */
         .section { 
             min-height: 100vh; 
             display: flex; 
@@ -44,7 +42,6 @@
         h1 { color: #ff7f50; font-size: 3.5em; margin: 10px 0; }
         .slogan { font-style: italic; color: #555; font-size: 1.5em; margin-bottom: 30px; }
 
-        /* Ramazan Kartı */
         .ramazan-container {
             display: flex;
             flex-direction: row;
@@ -76,6 +73,21 @@
 
         .info-cards { display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap; }
         .info-card { background: white; padding: 20px; border-radius: 20px; width: 280px; }
+
+        /* Alt Kısım (Footer) ve Gizli Giriş Stili */
+        footer {
+            background-color: #333;
+            color: #888;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+        .admin-link {
+            cursor: pointer;
+            font-family: monospace;
+            font-size: 0.9em;
+            transition: 0.3s;
+        }
+        .admin-link:hover { color: #ff7f50; }
 
         @keyframes bounce {
             0%, 100% {transform: translateY(0);}
@@ -112,7 +124,7 @@
                 <h2 style="color: #ff7f50; margin-top: 0;">Çiftlik Oyunu Ramazan Etkinliği</h2>
                 <p style="color: #444; line-height: 1.6; font-size: 1.1em;">
                     Şeftali Çiftliği'nde davullar çalıyor! 🥁 <br><br>
-                    Tavuğumuz ve ineğimizle hazırladığımız bu özel projede Ramazan neşesini keşfedin. Yeni görevler yolda!
+                    Tavuğumuz ve ineğimizle hazırladığımız bu özel projede Ramazan neşesini keşfedin.
                 </p>
                 <button class="btn">Yakında Yayında!</button>
             </div>
@@ -126,18 +138,18 @@
         </div>
     </div>
 
-    <div style="margin-top: 50px; padding: 40px; opacity: 0.4;">
-        <span onclick="adminPaneli()" style="cursor: pointer; font-size: 0.8em; color: #888; border-bottom: 1px dashed #888; font-family: monospace;">
-            🔒 Studio Management System v2.6
-        </span>
-    </div>
+    <footer>
+        <p>© 2026 Şeftali Studio - Tüm Hakları Saklıdır.</p>
+        <div class="admin-link" onclick="adminPaneli()">
+            [ SYSTEM ACCESS V2.6 ]
+        </div>
+    </footer>
 
     <script>
     function adminPaneli() {
         var user = prompt("Kullanıcı Adı:");
         var pass = prompt("Erişim Şifresi:");
         
-        // Kullanıcı adı: Patates_14 | Şifre: seftali2026
         if (user === "Patates_14" && pass === "seftali2026") {
             alert("Erişim Onaylandı. Hoş geldin Patates_14!");
             window.location.href = "admin.html";
