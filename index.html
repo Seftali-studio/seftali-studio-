@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Şeftali Studio - Anasayfa</title>
     <style>
-        /* Menü Sabitleme */
+        /* Menüyü Üste Sabitle */
         nav { 
             background-color: #333; 
             padding: 15px; 
@@ -25,7 +25,7 @@
             scroll-behavior: smooth; 
         }
         
-        /* Bölümleri Ekran Boyuna Ayarlama */
+        /* Her bölüm ekranın tam boyu (100vh) olacak */
         .section { 
             min-height: 100vh; 
             display: flex; 
@@ -40,6 +40,7 @@
 
         /* Logo Ayarı */
         .logo { width: 280px; height: auto; border-radius: 15px; margin-bottom: 20px; }
+        
         h1 { color: #ff7f50; font-size: 3em; margin: 10px 0; }
         .slogan { font-style: italic; color: #555; font-size: 1.5em; }
 
@@ -51,6 +52,13 @@
             border-radius: 20px; 
             width: 280px; 
             box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
+        }
+
+        /* Zıplama Animasyonu */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
         }
     </style>
 </head>
@@ -64,37 +72,33 @@
 
     <div class="section hero">
         <img src="logo.png" alt="Seftali Studio Logo" class="logo">
+        
         <h1>Şeftali Studio</h1>
         <p class="slogan">"Basitlikten Doğan Eğlence."</p>
-        <p style="margin-top: 40px; color: #ff7f50; font-weight: bold; animation: bounce 2s infinite;">↓ Aşağı Kaydır</p>
+        
+        <div style="margin-top: 50px; color: #ff7f50; font-weight: bold; animation: bounce 2s infinite;">
+            <p>Etkinlikler İçin Aşağı Kaydır</p>
+            <p>↓</p>
+        </div>
     </div>
 
     <div class="section etkinlikler">
         <h2 style="font-size: 2.5em; color: #d35400;">📅 Etkinliklerimiz</h2>
         <div class="card-container">
             <div class="card">
-                <h3>Oyun Geliştirme</h3>
-                <p>Scratch kullanarak en hızlı ve eğlenceli oyunları tasarlıyoruz.</p>
+                <h3>Scratch Game Jam</h3>
+                <p>Kendi oyunlarımızı yarıştıracağımız eğlenceli etkinlikler.</p>
             </div>
             <div class="card">
-                <h3>Yarışmalar</h3>
-                <p>Topluluğumuz için düzenli Game Jam etkinlikleri başlatacağız.</p>
+                <h3>Yeni Projeler</h3>
+                <p>2026 yılına özel yeni basit oyun serilerimiz geliyor.</p>
             </div>
             <div class="card">
-                <h3>Paylaşım</h3>
-                <p>Öğrendiğimiz her yeni tekniği projelerimizde uyguluyoruz.</p>
+                <h3>Geliştirici Günlükleri</h3>
+                <p>Oyunlarımızı nasıl yaptığımızı burada paylaşacağız.</p>
             </div>
         </div>
     </div>
-
-    <style>
-        /* Ok işareti için küçük bir zıplama animasyonu */
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(-10px);}
-            60% {transform: translateY(-5px);}
-        }
-    </style>
 
 </body>
 </html>
